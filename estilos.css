@@ -1,0 +1,50 @@
+body {
+  background: #e8e4e1;
+}
+
+.pelota {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: 5s ease-out;
+  transition-property: right, left, transform;
+  position: absolute;
+}
+
+.pelota.a {
+  background: #ec823a;
+  left: 20px;
+}
+
+.pelota.b {
+  background: #7c3c21;
+  right: 20px;
+}
+
+.contenedor {
+  transform: skew(15deg);
+  /* border: 2px solid black; */
+  background: white;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.canasta {
+  transform: skew(-30deg);
+  /* border: 2px solid black; */
+  background: white;
+  position: relative;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+.canasta:hover .pelota.a {
+  left: calc(50% - 75px);
+  transform: scaleY(1.5);
+}
+
+.canasta:hover .pelota.b {
+  right: calc(50% - 75px);
+  transform: scaleX(1.5);
+}
