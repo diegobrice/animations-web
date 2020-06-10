@@ -1,0 +1,46 @@
+body {
+  background: red;
+  perspective-origin: 50% 50%;
+  perspective: 100px;
+}
+
+.box {
+  width: 75px;
+  /* border: 1px solid black; */
+  height: 75px;
+  background: blue;
+  margin: 50px;
+  display: inline-block;
+  transform: rotateX(45deg);
+  transition: 1s;
+  animation-name: girar;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.box:nth-child(2n+1) {
+  animation-delay: 1s;
+}
+
+@keyframes girar {
+  from {
+    transform: rotateX(45deg);
+    transform: rotateY(0);
+    /* transform: rotateZ(45deg); */
+  }
+
+  50% {
+    transform: rotateX(135deg);
+    transform: rotateY(90deg);
+    /* transform: rotateX(90deg);
+    transform: rotateY(45deg); */
+    /* transform: rotateZ(90deg); */
+  }
+
+  to {
+    transform: rotateX(270deg);
+    transform: rotateY(180deg);
+    /* transform: rotateZ(180deg); */
+  }
+
+}
