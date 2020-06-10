@@ -1,0 +1,65 @@
+body {
+  background: #ccc;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  animation-name: corre;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-duration: 3s;
+  position: relative;
+  animation-iteration-count: infinite;
+}
+
+.container:hover .box {
+
+  /* animation-play-state: paused; */
+}
+
+.box {
+  background: gray;
+  width: 150px;
+  height: 150px;
+  border: 20px solid black;
+  border-radius: 50%;
+  position: relative;
+  animation-name: salta;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+@keyframes corre {
+  0% {
+    left: 0;
+    animation-timing-function: linear;
+  }
+
+  100% {
+    left: calc(100% - 190px);
+    animation-timing-function: linear;
+  }
+}
+
+
+
+@keyframes salta {
+
+  from {
+    botttom: 0;
+    animation-timing-function: ease-out;
+
+  }
+
+  50% {
+    transform: translateY(calc(100vh - 190px));
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    botttom: 0;
+    animation-timing-function: ease-out;
+
+  }
+}
